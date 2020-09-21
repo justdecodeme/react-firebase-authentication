@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import SignOutButton from "../SignOut";
 import * as ROUTES from "../../constants/routes";
 
-const Navigation = ({ authUser }) => (
-	<div>{authUser ? <NavigationAuth /> : <NavigationNonAuth />}</div>
-);
+const Navigation = ({ authUser }) => {
+	console.log(authUser);
+	return <div>{authUser ? <NavigationAuth /> : <NavigationNonAuth />}</div>;
+};
 
 const NavigationAuth = () => (
 	<ul>

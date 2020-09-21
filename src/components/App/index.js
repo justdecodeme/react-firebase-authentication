@@ -24,6 +24,7 @@ class App extends Component {
 
 	componentDidMount() {
 		this.listener = this.props.firebase.auth.onAuthStateChanged((authUser) => {
+			console.log(authUser);
 			authUser
 				? this.setState({ authUser })
 				: this.setState({ authUser: null });
@@ -38,7 +39,7 @@ class App extends Component {
 		return (
 			<Router>
 				<div>
-					<Navigation />
+					<Navigation authUser={this.state.authUser} />
 
 					<hr />
 
