@@ -8,8 +8,8 @@ import SomeComponent from "./components/SomeComponent";
 
 ReactDOM.render(
 	<FirebaseContext.Provider value={new Firebase()}>
-		{/* <App /> */}
-		<SomeComponent />
+		<App />
+		{/* <SomeComponent /> */}
 	</FirebaseContext.Provider>,
 	document.getElementById("root")
 );
